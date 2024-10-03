@@ -1,0 +1,116 @@
+body {
+    font-family: "Lexend Mega", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #16213e;
+    background-color: #e94560;
+    padding: 10px;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+.header-image {
+    height: 100px;
+}
+.mx {
+    align-items: right;
+    align-content: right;
+    width: 200px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    transform: skew(-5deg);
+}
+.content {
+    background-color: #16213e;
+    padding: 30px;
+    border: 5px solid #e94560;
+    margin-top: 40px;
+}
+.cta {
+    display: inline-block;
+    background-color: #fca311;
+    color: #1a1a2e;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 30px;
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+}
+.cta:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.link {
+    color: #2fff2f;
+    text-decoration: none;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+    -webkit-transform: rotate(-3deg); 
+    -moz-transform: rotate(-3deg);    
+    transform:rotate(-3deg);
+}
+.marquee-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fca311;
+    z-index: 1000;
+    overflow: hidden;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+    color: #16213e;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
