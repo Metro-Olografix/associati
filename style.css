@@ -9,17 +9,21 @@ body {
     padding: 0;
     line-height: 1.6;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 80px 20px;
 }
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
+
 .logo {
     font-size: 2.5rem;
     font-weight: bold;
@@ -28,10 +32,14 @@ body {
     padding: 10px;
     display: inline-block;
     transform: rotate(-2deg);
-}
+}   
+
 .header-image {
     height: 100px;
+    max-width: 100%;
+    object-fit: contain;
 }
+
 .mx {
     align-items: right;
     align-content: right;
@@ -40,17 +48,20 @@ body {
     display: inline-block;
     margin-bottom: 40px;
 }
+
 h1 {
     font-size: 4rem;
     margin-bottom: 20px;
     transform: skew(-5deg);
 }
+
 .content {
     background-color: #16213e;
     padding: 30px;
     border: 5px solid #e94560;
     margin-top: 40px;
 }
+
 .cta {
     display: inline-block;
     background-color: #fca311;
@@ -62,14 +73,17 @@ h1 {
     transform: rotate(3deg);
     transition: transform 0.3s ease;
 }
+
 .cta:hover {
     transform: rotate(0deg) scale(1.05);
 }
+
 footer {
     margin-top: 60px;
     text-align: center;
     font-size: 0.9rem;
 }
+
 .link {
     color: #2fff2f;
     text-decoration: none;
@@ -79,6 +93,7 @@ footer {
     -moz-transform: rotate(-3deg);    
     transform:rotate(-3deg);
 }
+
 .marquee-container {
     position: fixed;
     top: 0;
@@ -112,5 +127,32 @@ footer {
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .header-image {
+        height: 80px;
+    }
+
+    .cta {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
     }
 }
